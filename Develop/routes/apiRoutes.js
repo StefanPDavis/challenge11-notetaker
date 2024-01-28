@@ -11,7 +11,7 @@ module.exports = (app) => {
         db = JSON.parse(db);
         res.json(db);
 
-        let useNote = {
+        let userNote = {
             title: req.body.text,
             text: req.body.text
         };
