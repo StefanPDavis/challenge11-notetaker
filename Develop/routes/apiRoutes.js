@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const uuid = require('uuid');
 
 module.exports = (app) => {
     app.get('/api/notes', (req, res) => {
@@ -13,7 +14,8 @@ module.exports = (app) => {
 
         let userNote = {
             title: req.body.title,
-            text: req.body.text
+            text: req.body.text,
+            id: uuid
         };
 
         db.push(userNote);
